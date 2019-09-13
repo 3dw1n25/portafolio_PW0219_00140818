@@ -1,0 +1,21 @@
+.container {
+  background-color: tomato;
+}
+
+body {
+  width: 50%;
+  height: 100vh;
+}
+
+.container {
+  background-color: tomato;
+}
+
+.container .btn {
+  background-color: orange;
+}
+
+.container:hover {
+  background-color: orange;
+}
+/*# sourceMappingURL=style.css.map */
