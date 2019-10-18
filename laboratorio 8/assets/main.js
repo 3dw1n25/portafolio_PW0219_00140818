@@ -13,12 +13,12 @@ function addStudent(carnet, schedule, late, tbody) {
 
   newRow.innerHTML = `<td><b>${carnet}</td>
     <td><b>${schedule}</td>
-    <td><b>${date.toLocaStrin()}</td>
+    <td><b>${date.toLocaleString()}</td>
     <td>${late}</td>`;
 
   let cellContainer = document.createElement("td");
 
-  let newBtn = Document.createElement("button");
+  let newBtn = document.createElement("button");
   newBtn.classList.add("btn");
   newBtn.classList.add("btn-danger");
   newBtn.innerText = "Drop";
@@ -27,12 +27,11 @@ function addStudent(carnet, schedule, late, tbody) {
   cellContainer.appendChild(newBtn);
   newRow.appendChild(cellContainer);
 
-  newBtn,
-    addEventListener("click", value => {
+  newBtn.addEventListener("click", event => {
       let idElement = event.srcElement.value;
 
       let elementNode = document.querySelector(
-        `tr>td>button[value='$idElement']`
+        `tr>td>button[value='${idElement}']`
         ).parentElement.parentElement;
 
         tbody.removeChild(elementNode);
@@ -46,7 +45,7 @@ function addStudent(carnet, schedule, late, tbody) {
 window.onload = () => {
   let submit_btn = document.querySelector("#submit_btn");
   let carnet_field = document.querySelector("#carnet_field");
-  let schedule_field = document.querySelector("#chedule_field");
+  let schedule_field = document.querySelector("#schedule_field");
   let late_field = document.querySelector("#late_switch");
   let tBody = document.querySelector("#table_body");
 

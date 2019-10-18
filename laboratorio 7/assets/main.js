@@ -11,7 +11,7 @@ function addStudent(carnet, schedule, late, tbody) {
 
   newRow.innerHTML = `<td><b>${carnet}</td>
     <td><b>${schedule}</td>
-    <td><b>${date.toLocaStrin()}</td>
+    <td><b>${date.toLocaleString()}</td>
     <td>${late}</td>`;
 
   tbody.appendChild(newRow);
@@ -20,7 +20,7 @@ function addStudent(carnet, schedule, late, tbody) {
 window.onload = () => {
   let submit_btn = document.querySelector("#submit_btn");
   let carnet_field = document.querySelector("#carnet_field");
-  let schedule_field = document.querySelector("#chedule_field");
+  let schedule_field = document.querySelector("#schedule_field");
   let late_field = document.querySelector("#late_switch");
   let tBody = document.querySelector("#table_body");
 
